@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Segoe Print';
+    src: local('Segoe Print Bold'), local('SegoePrint-Bold'),
+        url('../font/SegoePrint-Bold.woff2') format('woff2'),
+        url('../font/SegoePrint-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe Print';
+    src: local('Segoe Print'), local('SegoePrint'),
+        url('../font/SegoePrint.woff2') format('woff2'),
+        url('../font/SegoePrint.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'),
+        url('../font/YanoneKaffeesatz-Regular.woff2') format('woff2'),
+        url('../font/YanoneKaffeesatz-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    src: local('Yanone Kaffeesatz Light'), local('YanoneKaffeesatz-Light'),
+        url('../font/YanoneKaffeesatz-Light.woff2') format('woff2'),
+        url('../font/YanoneKaffeesatz-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yanone Kaffeesatz Extra';
+    src: local('Yanone Kaffeesatz Extra Light'), local('YanoneKaffeesatz-ExtraLight'),
+        url('../font/YanoneKaffeesatz-ExtraLight.woff2') format('woff2'),
+        url('../font/YanoneKaffeesatz-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    src: local('Yanone Kaffeesatz Bold'), local('YanoneKaffeesatz-Bold'),
+        url('../font/YanoneKaffeesatz-Bold.woff2') format('woff2'),
+        url('../font/YanoneKaffeesatz-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root{
+    --color-background: #1f2630;
+    --color-text: #dbdba4;
+    --color-title-purple: #73344c;
+    --color-title-pink: #e39f96;
+    --color-title-blue: #588681;
+}
+
+body{
+    background: var(--color-background);
+    color: var(--color-text);
+    font: 400 16px/1.5 "Segoe UI", "Helvetica Neue", Roboto, Arial, sans-serif;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* header */
+.header{
+    padding: 2rem 0;
+}
+.header .container{
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presentation{
+    max-width: 420px;
+    text-align: center;
+    order: 3;
+}
+
+.name{
+    color: var(--color-title-pink);
+    margin: 0 0 10px;
+    font-size: 3.2rem;
+    font-family: "Segoe Print";
+    font-weight: bold;
+}
+
+.photo{
+    border-radius: 25% 50%;
+    width: 410px;
+    height: auto;
+    max-width: 100%;
+}
+
+.social-link{
+    transition: 250ms ease-in-out;
+    display: inline-block;
+}
+
+.social-link:hover{
+    transform: scale(1.1);
+}
+
+.social-link img{
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+/* mobile header */
+@media (max-width: 800px){
+    .header .container{
+        flex-direction: column;
+    }
+    .presentation{
+        order: 1;
+    }
+}
+@media (max-width: 510px){
+    .name{
+        font-size: 2.1rem;
+    }
+}
+
+/* main title */
+.title{
+    font-family: "Yanone Kaffeesatz";
+    font-weight: 400;
+    font-size: 4rem;
+    order: 2;
+}
+
+@media (max-width: 800px){
+    .title{
+        text-align: center;
+    }
+}
+
+.title span{
+    display: block;
+}
+
+.title-english{
+    color: var(--color-title-purple);
+}
+
+.title-french{
+    color: var(--color-title-pink);
+}
+
+.title-japanese{
+    color: var(--color-title-blue);
+}
+
+/* sections */
+.section{
+    padding: 2rem 0;
+}
+.section-title{
+    font-family: "Segoe Print";
+    font-size: 2.2rem;
+}
+
+.section-title.me{
+    color: var(--color-title-purple);
+}
+
+.section-title.hobbies{
+    color: var(--color-title-pink);
+}
+
+.section-title.next{
+    color: var(--color-title-blue);
+}
